@@ -23,24 +23,56 @@
 //****************************************
 // Variable mutation and Type coercion
 //****************************************
+//
+//var firstName = 'Ivan';
+//var age = 28;
+//
+//console.log(firstName + ' ' + age);
+//
+//// Type coercion
+//var job, isMarried;
+//job = 'teacher';
+//isMarried = false;
+//
+//console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+//
+//// Variable mutation
+//
+//age = 'twenty eight';
+//job = 'driver'
+//alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+//
+//var lastName = prompt('What is his last name?');
+//console.log(`${firstName} ${lastName}`);
 
-var firstName = 'Ivan';
-var age = 28;
 
-console.log(firstName + ' ' + age);
+//****************************************
+// Basic operators
+//****************************************
 
-// Type coercion
-var job, isMarried;
-job = 'teacher';
-isMarried = false;
+var year, ageJohn, ageMark;
+now = 2020;
+//Math operators
+ageJohn = 28;
+ageMark = 33;
 
-console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+console.log(ageJohn);
+console.log(ageMark);
+console.log(now + 2);
+console.log(now * 2);
+console.log(now / 10);
 
-// Variable mutation
+// Logical operators
 
-age = 'twenty eight';
-job = 'driver'
-alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+var johnOlder = ageJohn > ageMark;
+console.log(johnOlder);
 
-var lastName = prompt('What is his last name?');
-console.log(`${firstName} ${lastName}`);
+//typeof operator
+
+console.log(typeof johnOlder);
+console.log(typeof ageMark);
+console.log(typeof 'yeah');
+var day;
+console.log(typeof day);
+var day = null;
+console.log(typeof day);
