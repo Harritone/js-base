@@ -81,36 +81,52 @@
 // Operator precedence
 //****************************************
 
-var now = 2018;
-var yearJohn = 1989;
-var fullAge = 18;
+//var now = 2018;
+//var yearJohn = 1989;
+//var fullAge = 18;
+//
+////Multiple operators
+//var isFullAge = now - yearJohn >= fullAge;
+//console.log(isFullAge);
+//
+//// Grouping
+//var ageJohn = now - yearJohn;
+//var ageMark = 35;
+//var average = (ageJohn + ageMark) / 2;
+//console.log(average);
+//
+//// Multiple assignments
+//
+//var x, y;
+//x = y = (3 + 5) * 4 - 6; 
+//console.log(x, y);
+//
+//// more operators
+//
+//x *= 2;
+//console.log(x);
+//
+//x += 10;
+//console.log(x);
+//
+//x++;
+//console.log(x);
+//
+//x--;
+//console.log(x);
 
-//Multiple operators
-var isFullAge = now - yearJohn >= fullAge;
-console.log(isFullAge);
+//****************************************
+// Challenge 1
+//****************************************
 
-// Grouping
-var ageJohn = now - yearJohn;
-var ageMark = 35;
-var average = (ageJohn + ageMark) / 2;
-console.log(average);
+var massMark = 100;
+var heightMark = 1.86;
+var massJohn = 85;
+var heightJohn = 1.65;
 
-// Multiple assignments
-
-var x, y;
-x = y = (3 + 5) * 4 - 6; 
-console.log(x, y);
-
-// more operators
-
-x *= 2;
-console.log(x);
-
-x += 10;
-console.log(x);
-
-x++;
-console.log(x);
-
-x--;
-console.log(x);
+var bmiMark = massMark / heightMark^2;
+console.log(bmiMark);
+var bmiJohn = massJohn / heightJohn^2;
+console.log(bmiJohn);
+var fater = bmiMark > bmiJohn;
+console.log(`Is Mark's BMI higher than John's? ${fater}`);
