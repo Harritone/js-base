@@ -124,9 +124,9 @@ var heightMark = 1.86;
 var massJohn = 85;
 var heightJohn = 1.65;
 
-var bmiMark = massMark / heightMark^2;
+var bmiMark = massMark / heightMark**2;
 console.log(bmiMark);
-var bmiJohn = massJohn / heightJohn^2;
+var bmiJohn = massJohn / heightJohn**2;
 console.log(bmiJohn);
 var fater = bmiMark > bmiJohn;
 console.log(`Is Mark's BMI higher than John's? ${fater}`);
