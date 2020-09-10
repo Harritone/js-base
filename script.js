@@ -604,6 +604,7 @@
 
 john = {
   bills: [124, 58, 268, 180, 42],
+  name: 'John',
   calcTips: function() {
     this.tips = [];
     this.finalValues = [];
@@ -626,6 +627,7 @@ john = {
 
 mark = {
   bills: [77, 475, 110, 45],
+  name: 'Mark',
   calcTips: function() {
     this.tips = [];
     this.finalValues = [];
@@ -646,7 +648,26 @@ mark = {
   }
 }
 
+function calcAverage(tips) {
+  var sum = 0;
+  for (var i = 0; i < tips.length; i++) {
+    sum += tips[i];
+  }
+  return sum / tips.length;
+}
+
+function isHigher(john, mark) {
+  if (calcAverage(mark.tips) > calcAverage(john.tips)){
+    return `${mark.name} tips more`;
+  } else {
+    return `${john.name} tips more`
+  }
+}
+
 john.calcTips();
 mark.calcTips();
 console.log(john, mark);
+console.log(calcAverage(mark.tips));
+console.log(calcAverage(john.tips));
+console.log(isHigher(john, mark));
 
