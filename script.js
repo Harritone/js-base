@@ -429,44 +429,74 @@
 // Coding challenge 3
 //****************************************
 
-var billOne = 124;
-var billTwo = 48;
-var billThree = 268;
+//var billOne = 124;
+//var billTwo = 48;
+//var billThree = 268;
+//
+//
+//function tipCalc(bill) {
+//  switch(true){
+//    case bill < 50:
+//      return bill * .2;
+//    case bill >= 50 && bill < 200:
+//      return bill * .15;
+//    case bill > 200:
+//      return bill * .1;
+//  }
+//}
+//
+//var arr1 = [billOne, billTwo, billThree];
+//var arr2 = [arr1[0] + tipCalc(billOne), arr1[1] + tipCalc(billTwo), arr1[2] + tipCalc(billThree)];
+//
+//console.log(arr1, arr2);
+//
+//function tipCalculator(bill) {
+//  var percentage;
+//  if (bill < 50) {
+//    percentage = .2;
+//  } else if (bill >= 50 && bill < 200) {
+//    percentage = .15;
+//  } else {
+//    percentage =.1;
+//  }
+//  return percentage * bill;
+//}
+//console.log(tipCalculator(1000));
+//var tips = [ tipCalculator(arr1[0]),
+//  tipCalculator(arr1[1]),
+//  tipCalculator(arr1[2])];
+//console.log(tips);
+//
+//var arr3 = [arr1[0] + tipCalculator(arr1[0]), arr1[1] + tipCalculator(arr1[1]), arr1[2] + tipCalculator(arr1[2])];
+//console.log(arr3);
+//
 
+//****************************************
+// Objects and properties
+//****************************************
+// object literal
+var john = {
+  firsName: 'John',
+  lastName: 'Smith',
+  birthYear: 1990,
+  family: ['Jane', 'Mark', 'Bob', 'Emily'],
+  job: 'teacher',
+  isMarried: false
+};
 
-function tipCalc(bill) {
-  switch(true){
-    case bill < 50:
-      return bill * .2;
-    case bill >= 50 && bill < 200:
-      return bill * .15;
-    case bill > 200:
-      return bill * .1;
-  }
-}
+console.log(john.firsName);
+console.log(john.family);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
 
-var arr1 = [billOne, billTwo, billThree];
-var arr2 = [arr1[0] + tipCalc(billOne), arr1[1] + tipCalc(billTwo), arr1[2] + tipCalc(billThree)];
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
 
-console.log(arr1, arr2);
-
-function tipCalculator(bill) {
-  var percentage;
-  if (bill < 50) {
-    percentage = .2;
-  } else if (bill >= 50 && bill < 200) {
-    percentage = .15;
-  } else {
-    percentage =.1;
-  }
-  return percentage * bill;
-}
-console.log(tipCalculator(1000));
-var tips = [ tipCalculator(arr1[0]),
-  tipCalculator(arr1[1]),
-  tipCalculator(arr1[2])];
-console.log(tips);
-
-var arr3 = [arr1[0] + tipCalculator(arr1[0]), arr1[1] + tipCalculator(arr1[1]), arr1[2] + tipCalculator(arr1[2])];
-console.log(arr3);
-
+// new Object syntax
+var jane = new Object();
+jane.name = 'Jane';
+jane.birthYear = '1988';
+jane.job = 'Teacher';
+console.log(jane);
