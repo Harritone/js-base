@@ -343,23 +343,48 @@
 //****************************************
 // FUnctions
 //****************************************
+//
+//function calculateAge(birthYear) {
+//  return 2020 - birthYear;
+//}
+//
+//console.log(calculateAge(1986));
+//
+//var ageMe = calculateAge(1986);
+//console.log(ageMe);
+//var ageHegh = calculateAge(1231);
+//var ageKate = calculateAge(1988);
+//console.log(ageKate, ageHegh, ageMe);
+//
+//function yearsUntilRetirement(birthYear, firstName) {
+//  var age = calculateAge(birthYear);
+//  var retirement = 65 - age;
+//  console.log(` ${firstName} retires in ${retirement}.`)
+//}
+//
+//yearsUntilRetirement(1986, 'Iurii');
 
-function calculateAge(birthYear) {
-  return 2020 - birthYear;
-}
+//****************************************
+// Functions expressions and declaretions
+//****************************************
 
-console.log(calculateAge(1986));
+// function expresion
+//function whatDoYouDo(job, firstName){}
 
-var ageMe = calculateAge(1986);
-console.log(ageMe);
-var ageHegh = calculateAge(1231);
-var ageKate = calculateAge(1988);
-console.log(ageKate, ageHegh, ageMe);
+// function expresion
+  var whatDoYouDo = function(job, firstName){
+    switch(job) {
+      case 'teacher':
+        return firstName + ' teaches kids how to code';
+      case 'driver':
+        return firstName + ' drives an uber cab';
+      case 'designer':
+        return firstName + ' creates beautiful apps';
+        default:
+        return firstName + ' does something else';
+    }
+  }
 
-function yearsUntilRetirement(birthYear, firstName) {
-  var age = calculateAge(birthYear);
-  var retirement = 65 - age;
-  console.log(` ${firstName} retires in ${retirement}.`)
-}
-
-yearsUntilRetirement(1986, 'Iurii');
+var jake = whatDoYouDo('designer', 'Jake');
+console.log(whatDoYouDo('teacher', 'Jake'));
+console.log(jake);
