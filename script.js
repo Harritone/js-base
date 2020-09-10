@@ -259,25 +259,83 @@
 // Truthy and Falsy values
 //****************************************
 
-//Falsy: undefined, null, 0, '', NaN
-//Truthy: NOT falsy
+////Falsy: undefined, null, 0, '', NaN
+////Truthy: NOT falsy
+//
+//var height;
+//
+//height = '';
+//
+//height ? console.log('Variable is defined') : console.log('Variable has NOT been defined');
+//
+//if (height || height === 0) {
+//  console.log('Variable is defined');
+//} else {
+//  console.log('Variable has NOT been defined');
+//}
+//
+//// Equality operators
+//
+//height = '23';
+//
+//if (height == 23) {
+//  console.log('The ==  operator dies type coercion!');
+//}
 
-var height;
+//****************************************
+// Coding challenge 2
+//****************************************
 
-height = '';
+var firstGameScoreJohn = 89;
+var secondGameScoreJohn = 120;
+var thirdGameScoreJohn = 103;
 
-height ? console.log('Variable is defined') : console.log('Variable has NOT been defined');
+var firstGameScoreMike = 116;
+var secondGameScoreMike = 94;
+var thirdGameScoreMike = 123;
 
-if (height || height === 0) {
-  console.log('Variable is defined');
-} else {
-  console.log('Variable has NOT been defined');
+var avarageJohn = (firstGameScoreJohn + secondGameScoreJohn + thirdGameScoreJohn) / 3;
+var avarageMike = (firstGameScoreMike + secondGameScoreMike + thirdGameScoreMike) / 3;
+
+console.log(avarageMike);
+console.log(avarageJohn);
+
+switch (true) {
+  case avarageMike > avarageJohn:
+    console.log("Mike's team's won!");
+    break;
+  case avarageJohn > avarageMike:
+    console.log("John's team's won!");
+    break;
+  default:
+    console.log("Equal average scores!")
 }
 
-// Equality operators
+var firstGameScoreMary = 97;
+var secondGameScoreMary = 134;
+var thirdGameScoreMary = 105;
 
-height = '23';
+var averageMary = (firstGameScoreMary + secondGameScoreMary + thirdGameScoreMary) / 3;
+console.log(averageMary);
 
-if (height == 23) {
-  console.log('The ==  operator dies type coercion!');
+switch (true) {
+  case avarageMike > averageMary && avarageMike > avarageJohn:
+    console.log("Mike's team's won!");
+    break;
+  case avarageJohn > averageMary && avarageJohn > avarageMike:
+    console.log("John's team's won!");
+    break;
+  case averageMary > avarageMike && averageMary > avarageJohn:
+    console.log("Mary's team's won!");
+    break;
+  case avarageJohn === avarageMike && (avarageJohn > averageMary || avarageMike > averageMary):
+    console.log("Mike's team and John's team have equal scores and Mary's team lost.");
+    break;
+  case averageMary === avarageMike && (averageMary > avarageJohn || avarageMike > avarageJohn):
+    console.log("Mary's team and Mike's team won and John's team lost");
+    break;
+  case avarageJohn === averageMary && (avarageJohn > avarageMike || averageMary > avarageMike):
+    console.log("Mary's team and John's team won and Mike's team lost")
+  default: 
+    console.log('Draw!');
 }
