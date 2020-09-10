@@ -394,33 +394,79 @@
 //****************************************
 
 // initialize new array
-var names = ['John', 'Mark', 'Mario'];
-var years = new Array(1990, 1969, 1948);
+//var names = ['John', 'Mark', 'Mario'];
+//var years = new Array(1990, 1969, 1948);
+//
+//console.log(names[0]);
+//console.log(names[2]);
+//console.log(names);
+//console.log(names.length);
+//
+//// mutate array data
+//names[1] = 'Ben';
+//names[names.length] = 'Mary';
+//console.log(names);
+//
+//// different data types
+//
+//var john = ['John', 'Smith', 1990, 'teacher', true, 'designer'];
+//
+//john.push('blue');
+//john.unshift('Mr');
+//last = john.pop();
+//first = john.shift();
+//console.log(john);
+//console.log(first);
+//console.log(last);
+//
+//console.log(john.indexOf(1990));
+//console.log(john.indexOf(11)); // => -1
+//
+//var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
+//console.log(isDesigner);
 
-console.log(names[0]);
-console.log(names[2]);
-console.log(names);
-console.log(names.length);
+//****************************************
+// Coding challenge 3
+//****************************************
 
-// mutate array data
-names[1] = 'Ben';
-names[names.length] = 'Mary';
-console.log(names);
+var billOne = 124;
+var billTwo = 48;
+var billThree = 268;
 
-// different data types
 
-var john = ['John', 'Smith', 1990, 'teacher', true, 'designer'];
+function tipCalc(bill) {
+  switch(true){
+    case bill < 50:
+      return bill * .2;
+    case bill >= 50 && bill < 200:
+      return bill * .15;
+    case bill > 200:
+      return bill * .1;
+  }
+}
 
-john.push('blue');
-john.unshift('Mr');
-last = john.pop();
-first = john.shift();
-console.log(john);
-console.log(first);
-console.log(last);
+var arr1 = [billOne, billTwo, billThree];
+var arr2 = [arr1[0] + tipCalc(billOne), arr1[1] + tipCalc(billTwo), arr1[2] + tipCalc(billThree)];
 
-console.log(john.indexOf(1990));
-console.log(john.indexOf(11)); // => -1
+console.log(arr1, arr2);
 
-var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
-console.log(isDesigner);
+function tipCalculator(bill) {
+  var percentage;
+  if (bill < 50) {
+    percentage = .2;
+  } else if (bill >= 50 && bill < 200) {
+    percentage = .15;
+  } else {
+    percentage =.1;
+  }
+  return percentage * bill;
+}
+console.log(tipCalculator(1000));
+var tips = [ tipCalculator(arr1[0]),
+  tipCalculator(arr1[1]),
+  tipCalculator(arr1[2])];
+console.log(tips);
+
+var arr3 = [arr1[0] + tipCalculator(arr1[0]), arr1[1] + tipCalculator(arr1[1]), arr1[2] + tipCalculator(arr1[2])];
+console.log(arr3);
+
