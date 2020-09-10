@@ -602,72 +602,82 @@
 // Coding challenge 5
 //****************************************
 
-john = {
-  bills: [124, 58, 268, 180, 42],
-  name: 'John',
-  calcTips: function() {
-    this.tips = [];
-    this.finalValues = [];
+//john = {
+//  bills: [124, 58, 268, 180, 42],
+//  name: 'John',
+//  calcTips: function() {
+//    this.tips = [];
+//    this.finalValues = [];
+//
+//    for (var i = 0; i < this.bills.length; i++) {
+//      var percentage;
+//      var bill = this.bills[i];
+//      if (bill < 50) {
+//        percentage = .2;
+//      } else if(bill >= 50 && bill < 200) {
+//        percentage = .15;
+//      } else {
+//        percentage = .1;
+//      }
+//      this.tips[i] = bill * percentage;
+//      this.finalValues[i] = bill + bill * percentage;
+//    }
+//  }
+//}
+//
+//mark = {
+//  bills: [77, 475, 110, 45],
+//  name: 'Mark',
+//  calcTips: function() {
+//    this.tips = [];
+//    this.finalValues = [];
+//
+//    for (var i = 0; i < this.bills.length; i++) {
+//      var percentage;
+//      var bill = this.bills[i];
+//      if (bill < 100) {
+//        percentage = .2;
+//      } else if(bill >= 100 && bill < 300) {
+//        percentage = .1;
+//      } else {
+//        percentage = .25;
+//      }
+//      this.tips[i] = bill * percentage;
+//      this.finalValues[i] = bill + bill * percentage;
+//    }
+//  }
+//}
+//
+//function calcAverage(tips) {
+//  var sum = 0;
+//  for (var i = 0; i < tips.length; i++) {
+//    sum += tips[i];
+//  }
+//  return sum / tips.length;
+//}
+//
+//function isHigher(john, mark) {
+//  if (calcAverage(mark.tips) > calcAverage(john.tips)){
+//    return `${mark.name} tips more`;
+//  } else {
+//    return `${john.name} tips more`
+//  }
+//}
+//
+//john.calcTips();
+//mark.calcTips();
+//console.log(john, mark);
+//console.log(calcAverage(mark.tips));
+//console.log(calcAverage(john.tips));
+//console.log(isHigher(john, mark));
+//
 
-    for (var i = 0; i < this.bills.length; i++) {
-      var percentage;
-      var bill = this.bills[i];
-      if (bill < 50) {
-        percentage = .2;
-      } else if(bill >= 50 && bill < 200) {
-        percentage = .15;
-      } else {
-        percentage = .1;
-      }
-      this.tips[i] = bill * percentage;
-      this.finalValues[i] = bill + bill * percentage;
-    }
-  }
-}
+//****************************************
+// Hoisting
+//****************************************
 
-mark = {
-  bills: [77, 475, 110, 45],
-  name: 'Mark',
-  calcTips: function() {
-    this.tips = [];
-    this.finalValues = [];
+function calculateAge(year) {
+  console.log(2020 - year);
+};
 
-    for (var i = 0; i < this.bills.length; i++) {
-      var percentage;
-      var bill = this.bills[i];
-      if (bill < 100) {
-        percentage = .2;
-      } else if(bill >= 100 && bill < 300) {
-        percentage = .1;
-      } else {
-        percentage = .25;
-      }
-      this.tips[i] = bill * percentage;
-      this.finalValues[i] = bill + bill * percentage;
-    }
-  }
-}
-
-function calcAverage(tips) {
-  var sum = 0;
-  for (var i = 0; i < tips.length; i++) {
-    sum += tips[i];
-  }
-  return sum / tips.length;
-}
-
-function isHigher(john, mark) {
-  if (calcAverage(mark.tips) > calcAverage(john.tips)){
-    return `${mark.name} tips more`;
-  } else {
-    return `${john.name} tips more`
-  }
-}
-
-john.calcTips();
-mark.calcTips();
-console.log(john, mark);
-console.log(calcAverage(mark.tips));
-console.log(calcAverage(john.tips));
-console.log(isHigher(john, mark));
-
+calculateAge(1990);
