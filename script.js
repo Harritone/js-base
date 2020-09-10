@@ -191,66 +191,93 @@
 // Ternary opertor and swith statements
 //****************************************
 
-var firstName = 'John';
-var age = 20;
-
-//ternary operator
-age >= 18 ? console.log(`${firstName} drinks beer.`) : console.log(`${firstName} drinks juice`);
-
-age = 14;
-var drink = age >= 18 ? 'beer' : 'juice';
-
-console.log(`${firstName} drinks ${drink}`);
-
-age = 23;
-if (age >= 18) {
-  var drink = 'beer'
-} else {
-  var drink = 'juice'
-}
-
-console.log(`${firstName} drinks ${drink}`);
-
-//switch statements
-
-var job = 'freelancer';
-switch (job) {
-  case 'teacher':
-  case 'instructor':
-    console.log(`${firstName} is a teacher`);
-    break;
-  case 'driver':
-    console.log(`${firstName} drives an yandex cab in Moscow`);
-    break;
-  case 'designer':
-    console.log(`${firstName} designs beautiful websites`);
-    break;
-  default:
-    console.log(`${firstName} is self-employed`);
-}
-
-//if (age < 13) {
-//  console.log(`${firstName} is a boy.`);
-//} else if(age >= 13 && age < 20) {
-//  console.log(`${firstName} is a teenager.`);
-//} else if (age >= 20 && age < 30) {
-//  console.log(`${firstName} is a young man`);
+//var firstName = 'John';
+//var age = 20;
+//
+////ternary operator
+//age >= 18 ? console.log(`${firstName} drinks beer.`) : console.log(`${firstName} drinks juice`);
+//
+//age = 14;
+//var drink = age >= 18 ? 'beer' : 'juice';
+//
+//console.log(`${firstName} drinks ${drink}`);
+//
+//age = 23;
+//if (age >= 18) {
+//  var drink = 'beer'
 //} else {
-//  console.log(`${firstName} is a man.`);
+//  var drink = 'juice'
 //}
-var firstName = 'John';
-var age = 13;
+//
+//console.log(`${firstName} drinks ${drink}`);
+//
+////switch statements
+//
+//var job = 'freelancer';
+//switch (job) {
+//  case 'teacher':
+//  case 'instructor':
+//    console.log(`${firstName} is a teacher`);
+//    break;
+//  case 'driver':
+//    console.log(`${firstName} drives an yandex cab in Moscow`);
+//    break;
+//  case 'designer':
+//    console.log(`${firstName} designs beautiful websites`);
+//    break;
+//  default:
+//    console.log(`${firstName} is self-employed`);
+//}
+//
+////if (age < 13) {
+////  console.log(`${firstName} is a boy.`);
+////} else if(age >= 13 && age < 20) {
+////  console.log(`${firstName} is a teenager.`);
+////} else if (age >= 20 && age < 30) {
+////  console.log(`${firstName} is a young man`);
+////} else {
+////  console.log(`${firstName} is a man.`);
+////}
+//var firstName = 'John';
+//var age = 13;
+//
+//switch(true) {
+//  case age < 13:
+//    console.log(`${firstName} is a boy.`);
+//    break;
+//  case age >= 13 && age < 20:
+//    console.log(`${firstName} is a teenager.`);
+//    break;
+//  case age >= 20 && age < 30:
+//    console.log(`${firstName} is a young man`);
+//    break;
+//  default:
+//    console.log(`${firstName} is a man.`);
+//}
 
-switch(true) {
-  case age < 13:
-    console.log(`${firstName} is a boy.`);
-    break;
-  case age >= 13 && age < 20:
-    console.log(`${firstName} is a teenager.`);
-    break;
-  case age >= 20 && age < 30:
-    console.log(`${firstName} is a young man`);
-    break;
-  default:
-    console.log(`${firstName} is a man.`);
+//****************************************
+// Truthy and Falsy values
+//****************************************
+
+//Falsy: undefined, null, 0, '', NaN
+//Truthy: NOT falsy
+
+var height;
+
+height = '';
+
+height ? console.log('Variable is defined') : console.log('Variable has NOT been defined');
+
+if (height || height === 0) {
+  console.log('Variable is defined');
+} else {
+  console.log('Variable has NOT been defined');
+}
+
+// Equality operators
+
+height = '23';
+
+if (height == 23) {
+  console.log('The ==  operator dies type coercion!');
 }
