@@ -507,17 +507,54 @@
 //****************************************
 
 
-var john = {
-  firsName: 'John',
-  lastName: 'Smith',
-  birthYear: 1986,
-  family: ['Jane', 'Mark', 'Bob', 'Emily'],
-  job: 'teacher',
-  isMarried: false,
-  calcAge: function(){
-    this.age = 2020 - this.birthYear;
+//var john = {
+//  firsName: 'John',
+//  lastName: 'Smith',
+//  birthYear: 1986,
+//  family: ['Jane', 'Mark', 'Bob', 'Emily'],
+//  job: 'teacher',
+//  isMarried: false,
+//  calcAge: function(){
+//    this.age = 2020 - this.birthYear;
+//  }
+//};
+//
+//john.calcAge();
+//console.log(john);
+
+//****************************************
+// Coding challenge 4
+//****************************************
+var mark = {
+  name: 'Mark',
+  mass: 86,
+  height: 1.83,
+  calcBMI: function() {
+    this.bmi = this.mass / this.height**2;
   }
 };
 
-john.calcAge();
-console.log(john);
+var john = {
+  name: 'John',
+  mass: 73,
+  height: 1.53,
+  calcBMI: function() {
+    this.bmi = this.mass / this.height**2;
+  }
+};
+
+var isFater = function(john, mark) {
+  mark.calcBMI();
+  john.calcBMI();
+
+  if (mark.bmi > john.bmi) {
+    return `${mark.name} has the highest BMI - ${mark.bmi}`;
+  } else if (john.bmi > mark.bmi) {
+    return `${john.name} has the highest BMI - ${john.bmi}`;
+  } else {
+    return `They have the same BMI - ${john.bmi}`;
+  }
+};
+
+console.log(isFater(john, mark));
+console.log(john, mark);
