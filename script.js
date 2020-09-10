@@ -286,56 +286,80 @@
 // Coding challenge 2
 //****************************************
 
-var firstGameScoreJohn = 89;
-var secondGameScoreJohn = 120;
-var thirdGameScoreJohn = 103;
+  //var firstGameScoreJohn = 89;
+  //var secondGameScoreJohn = 120;
+  //var thirdGameScoreJohn = 103;
+  //
+  //var firstGameScoreMike = 116;
+  //var secondGameScoreMike = 94;
+  //var thirdGameScoreMike = 123;
+  //
+  //var avarageJohn = (firstGameScoreJohn + secondGameScoreJohn + thirdGameScoreJohn) / 3;
+  //var avarageMike = (firstGameScoreMike + secondGameScoreMike + thirdGameScoreMike) / 3;
+  //
+  //console.log(avarageMike);
+  //console.log(avarageJohn);
+  //
+  //switch (true) {
+  //  case avarageMike > avarageJohn:
+  //    console.log("Mike's team's won!");
+  //    break;
+  //  case avarageJohn > avarageMike:
+  //    console.log("John's team's won!");
+  //    break;
+  //  default:
+  //    console.log("Equal average scores!")
+  //}
+  //
+  //var firstGameScoreMary = 97;
+  //var secondGameScoreMary = 134;
+  //var thirdGameScoreMary = 105;
+  //
+  //var averageMary = (firstGameScoreMary + secondGameScoreMary + thirdGameScoreMary) / 3;
+  //console.log(averageMary);
+  //
+  //switch (true) {
+  //  case avarageMike > averageMary && avarageMike > avarageJohn:
+  //    console.log("Mike's team's won!");
+  //    break;
+  //  case avarageJohn > averageMary && avarageJohn > avarageMike:
+  //    console.log("John's team's won!");
+  //    break;
+  //  case averageMary > avarageMike && averageMary > avarageJohn:
+  //    console.log("Mary's team's won!");
+  //    break;
+  //  case avarageJohn === avarageMike && (avarageJohn > averageMary || avarageMike > averageMary):
+  //    console.log("Mike's team and John's team have equal scores and Mary's team lost.");
+  //    break;
+  //  case averageMary === avarageMike && (averageMary > avarageJohn || avarageMike > avarageJohn):
+  //    console.log("Mary's team and Mike's team won and John's team lost");
+  //    break;
+  //  case avarageJohn === averageMary && (avarageJohn > avarageMike || averageMary > avarageMike):
+  //    console.log("Mary's team and John's team won and Mike's team lost")
+  //  default: 
+  //    console.log('Draw!');
+  //}
 
-var firstGameScoreMike = 116;
-var secondGameScoreMike = 94;
-var thirdGameScoreMike = 123;
+//****************************************
+// FUnctions
+//****************************************
 
-var avarageJohn = (firstGameScoreJohn + secondGameScoreJohn + thirdGameScoreJohn) / 3;
-var avarageMike = (firstGameScoreMike + secondGameScoreMike + thirdGameScoreMike) / 3;
-
-console.log(avarageMike);
-console.log(avarageJohn);
-
-switch (true) {
-  case avarageMike > avarageJohn:
-    console.log("Mike's team's won!");
-    break;
-  case avarageJohn > avarageMike:
-    console.log("John's team's won!");
-    break;
-  default:
-    console.log("Equal average scores!")
+function calculateAge(birthYear) {
+  return 2020 - birthYear;
 }
 
-var firstGameScoreMary = 97;
-var secondGameScoreMary = 134;
-var thirdGameScoreMary = 105;
+console.log(calculateAge(1986));
 
-var averageMary = (firstGameScoreMary + secondGameScoreMary + thirdGameScoreMary) / 3;
-console.log(averageMary);
+var ageMe = calculateAge(1986);
+console.log(ageMe);
+var ageHegh = calculateAge(1231);
+var ageKate = calculateAge(1988);
+console.log(ageKate, ageHegh, ageMe);
 
-switch (true) {
-  case avarageMike > averageMary && avarageMike > avarageJohn:
-    console.log("Mike's team's won!");
-    break;
-  case avarageJohn > averageMary && avarageJohn > avarageMike:
-    console.log("John's team's won!");
-    break;
-  case averageMary > avarageMike && averageMary > avarageJohn:
-    console.log("Mary's team's won!");
-    break;
-  case avarageJohn === avarageMike && (avarageJohn > averageMary || avarageMike > averageMary):
-    console.log("Mike's team and John's team have equal scores and Mary's team lost.");
-    break;
-  case averageMary === avarageMike && (averageMary > avarageJohn || avarageMike > avarageJohn):
-    console.log("Mary's team and Mike's team won and John's team lost");
-    break;
-  case avarageJohn === averageMary && (avarageJohn > avarageMike || averageMary > avarageMike):
-    console.log("Mary's team and John's team won and Mike's team lost")
-  default: 
-    console.log('Draw!');
+function yearsUntilRetirement(birthYear, firstName) {
+  var age = calculateAge(birthYear);
+  var retirement = 65 - age;
+  console.log(` ${firstName} retires in ${retirement}.`)
 }
+
+yearsUntilRetirement(1986, 'Iurii');
