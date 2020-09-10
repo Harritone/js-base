@@ -390,7 +390,7 @@
 //console.log(jake);
 
 //****************************************
-// Functions expressions and declaretions
+// Functions expressions and declarations
 //****************************************
 
 // initialize new array
@@ -568,7 +568,7 @@
 //}
 
 // for loop
-var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+//var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
 //
 //for (var i = 0; i < john.length; i++) {
 //  console.log(john[i]);
@@ -594,6 +594,35 @@ var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
 //}
 
 // Looping backwards
-for (var i = (john.length - 1); i >= 0; i--) {
-  console.log(i);
+//for (var i = (john.length - 1); i >= 0; i--) {
+//  console.log(i);
+//}
+
+//****************************************
+// Coding challenge 5
+//****************************************
+
+john = {
+  bills: [124, 58, 268, 180, 42],
+  calcTips: function() {
+    this.tips = [];
+    this.finalValues = [];
+
+    for (var i = 0; i < this.bills.length; i++) {
+      var percentage;
+      var bill = this.bills[i];
+      if (bill < 50) {
+        percentage = .2;
+      } else if(bill >= 50 && bill < 200) {
+        percentage = .15;
+      } else {
+        percentage = .1;
+      }
+      this.tips[i] = bill * percentage;
+      this.finalValues[i] = bill + bill * percentage;
+    }
+  }
 }
+
+john.calcTips();
+console.log(john);
