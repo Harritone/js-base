@@ -119,14 +119,54 @@
 // Challenge 1
 //****************************************
 
+//var massMark = 100;
+//var heightMark = 1.86;
+//var massJohn = 85;
+//var heightJohn = 1.65;
+//
+//var bmiMark = massMark / heightMark**2;
+//console.log(bmiMark);
+//var bmiJohn = massJohn / heightJohn**2;
+//console.log(bmiJohn);
+//var fater = bmiMark > bmiJohn;
+//console.log(`Is Mark's BMI higher than John's? ${fater}`);
+
+//****************************************
+// If / else statement
+//****************************************
+
+var firstName = 'John';
+var civilStatus = 'single';
+
+if (civilStatus === 'maried') {
+  console.log(`${firstName} is married`)
+} else {
+  console.log(`${firstName} is single`)
+}
+
+var isMarried = true;
+
+if (isMarried) {
+  console.log(`${firstName} is married`)
+} else {
+  console.log(`${firstName} is single`)
+}
+
+
 var massMark = 100;
 var heightMark = 1.86;
 var massJohn = 85;
 var heightJohn = 1.65;
 
 var bmiMark = massMark / heightMark**2;
-console.log(bmiMark);
+//console.log(bmiMark);
 var bmiJohn = massJohn / heightJohn**2;
-console.log(bmiJohn);
-var fater = bmiMark > bmiJohn;
-console.log(`Is Mark's BMI higher than John's? ${fater}`);
+//console.log(bmiJohn);
+//var fater = bmiMark > bmiJohn;
+//console.log(`Is Mark's BMI higher than John's? ${fater}`);
+
+if (bmiMark > bmiJohn) {
+  console.log("Mark's BMI is higher than John's")
+} else {
+  console.log("John's BMI is higher than Mark's")
+}
